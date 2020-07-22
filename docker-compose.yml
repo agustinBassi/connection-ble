@@ -9,7 +9,11 @@ services:
         dockerfile:         Dockerfile
     hostname:               beacons-observer
     container_name:         beacons-observer
-    restart:                always
+    # project labels 
+    labels: 
+      project:              "BLE Connection" 
+      day:                  "Jul 2020" 
+      mantainer:            Agustin Bassi
     # service specific settings
     volumes:
         -                   ./beacons-observer/db:/app/db
@@ -22,7 +26,11 @@ services:
     image:                  httpd:2.4
     hostname:               http-client
     container_name:         http-client
-    restart:                always
+    # project labels 
+    labels: 
+      project:              "BLE Connection" 
+      day:                  "Jul 2020" 
+      mantainer:            Agustin Bassi
     # service specific settings
     volumes:
         -                   ./http-client:/usr/local/apache2/htdocs/
@@ -30,8 +38,3 @@ services:
         -                   beacons-observer
     ports:
       -                     "5001:80"
-
-
-networks:
-  blue-connection-net:
-    driver:                 bridge

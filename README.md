@@ -1,6 +1,6 @@
 ![header](doc/header.png)
 
-# Open source Bluetooth Beacons Platform
+# Open source Bluetooth LE Platform
 
 Author: Agustin Bassi - 2020
 
@@ -17,7 +17,7 @@ Author: Agustin Bassi - 2020
 ## 
 ## Platform Description
 
-The goal of this project is to create an open source Bluetooth LE Beacons Platform to be used as a part of an IoT system, based on beacons technology.
+The goal of this project is to create an open source Bluetooth LE Platform to be used as a part of an IoT system, based on Bluetooth LE technology.
 
 The platform consists in several sub-application described below:
 
@@ -26,7 +26,7 @@ The platform consists in several sub-application described below:
 * **Beacons Broadcasters**: A bunch of utilities for different platforms to generate beacon packages from devices like ESP32, Linux Systems or event any compatible smartphone.
 * **Content Management System**: A CMS to associate each beacon to different content or action.
 
-All of this parts are well described in the [Project Wiki](https://github.com/agustinBassi/blue-connection/wiki). Please, refer to it in order to get all required information.
+All of this parts are well described in the [Project Wiki](https://github.com/agustinBassi/ble-connection/wiki). Please, refer to it in order to get all required information.
 
 In the figure below there is a description of the platform modules and how they interact each others.
 
@@ -61,8 +61,8 @@ Once dependencies are installed in the Raspberry Pi do the next steps.
 1. Download the platform code (this repository) with the next command.
 
 ```
-git clone https://github.com/agustinBassi/blue-connection.git
-cd blue-connection/
+git clone https://github.com/agustinBassi/ble-connection.git
+cd ble-connection/
 ```
 
 2. Compile the Beacons-Observer docker image with the command below.
@@ -77,14 +77,14 @@ docker-compose build beacons-observer
 docker-compose up
 ```
 
-4. Run the HTTP Client. If the platform is running by managing the Raspberry Pi directly with mouse and keyboard go to [http://localhost:5001/](http://localhost:5001/) to open the client. If the platform is running by managing the Raspberry Pi via SSH go to [http://raspberri_pi_ip:5001/](http://raspberri_pi_ip:5001/) to open the client.
+4. Run the HTTP Client opening [http://raspberri_pi_ip:5001/](http://raspberri_pi_ip:5001/) in the web browser.
 
 ## 
 ## Want to help?
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-If someone want to helpme, every bit of effort will be appreciated. In [this link](https://github.com/agustinBassi/blue-connection/projects/1) there is the project status board. You can take any card you want (or propose one) from the ToDo list and start to work.
+If someone want to helpme, every bit of effort will be appreciated. In [this link](https://github.com/agustinBassi/ble-connection/projects/1) there is the project status board. You can take any card you want (or propose one) from the ToDo list and start to work.
 
 If you find it useful please helpme following my Github user and give to this project a Star. This will animate me to continue contribuiting with the great open source community.
 
