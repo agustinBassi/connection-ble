@@ -1,6 +1,6 @@
 ![header](doc/images/generals/header.png)
 
-# BLUE Connection Changes Log
+# BLE Connection Changes Log
 
 All notable changes to this project will be documented in this file.
 
