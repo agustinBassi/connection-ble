@@ -12,10 +12,10 @@ EXPOSE 5000
 
 ##### RUN IN PROD MODE (source code bundled into image) #######################
 
-# Install all dependencies
-RUN pip install -r requirements.txt
 # Copy the requirements to the container
 COPY src /app/src
+# Install all dependencies
+RUN pip install -r requirements.txt
 # Execute this command as default
 CMD ["python", "app.py"]
 
