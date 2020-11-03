@@ -177,7 +177,17 @@ class IBeaconsScanner:
         if self._nearest_beacon is None or self._last_nearest_beacon is None:
             return True
         
-        if self._nearest_beacon.mac_address != self._last_nearest_beacon.mac_address:
+        nearest_beacon_hash = hash(
+           str(self._nearest_beacon.mac_address) + 
+           str(self._nearest_beacon.major) +
+           str(self._nearest_beacon.minor)
+        )
+        last_nearest_beacon_hash = hash(
+           str(self._last_nearest_beacon.mac_address) +
+           str(self._last_nearest_beacon.major) +
+           str(self._last_nearest_beacon.minor)
+        )
+        if nearest_beacon_hash != last_nearest_beacon_hash:
             return True
         else:
             return False
